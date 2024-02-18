@@ -15,10 +15,10 @@ public class Keyboard extends DispositivoEntrada {
     /**
      * Constructor de la Clase Keyboard
      *
+     * @param marca Marca del dispositivo de entrada
      * @param tipoEntrada Tipo de entrada del periférico
-     * @param marca       Marca del dispositivo de entrada
      */
-    public Keyboard(String tipoEntrada, String marca) {
+    public Keyboard(String marca, String tipoEntrada) {
 
         //Constructor de la clase Padre
         super(tipoEntrada, marca);
@@ -29,7 +29,7 @@ public class Keyboard extends DispositivoEntrada {
 
     @Override
     public String toString() {
-        return "Keyboard{" + "idKeyboard=" + this.idKeyboard + "tipoEntrada='" + super.getTipoEntrada() + '\'' + ", marca='" + super.getMarca() + '\'' + "}";
+        return "Keyboard{" + "idKeyboard=" + this.idKeyboard + ", " + super.toString() + "}";
     }
 }
 

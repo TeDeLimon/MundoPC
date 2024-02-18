@@ -5,7 +5,7 @@ public class Monitor {
     /**
      * ID Único del Monitor
      */
-    private int idMonitor;
+    private final int idMonitor;
 
     /**
      * Marca del Monitor
@@ -23,10 +23,16 @@ public class Monitor {
     private static int countMonitor;
 
     private Monitor() {
-
+        this.idMonitor = ++Monitor.countMonitor;
     }
 
+    /**
+     * Public Constructor for Monitor
+     * @param brand Marca del Monitor
+     * @param size Tamaño pulgadas del Monitor
+     */
     public Monitor(String brand, double size) {
+        this();
         this.brand = brand;
         this.size = size;
     }
@@ -36,12 +42,10 @@ public class Monitor {
         return "Monitor{idMonitor=%d, brand='%s', size=%s, countMonitor=%d}".formatted(idMonitor, brand, size, countMonitor);
     }
 
+    // Getters and Setters for the class Monitor
+
     public int getIdMonitor() {
         return idMonitor;
-    }
-
-    public void setIdMonitor(int idMonitor) {
-        this.idMonitor = idMonitor;
     }
 
     public String getBrand() {
@@ -65,6 +69,6 @@ public class Monitor {
     }
 
     public void setCountMonitor(int countMonitor) {
-        this.countMonitor = countMonitor;
+        Monitor.countMonitor = countMonitor;
     }
 }

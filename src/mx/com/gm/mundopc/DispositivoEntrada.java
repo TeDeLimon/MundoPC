@@ -13,9 +13,9 @@ public class DispositivoEntrada {
     private String marca;
 
     /**
-     * Public Constructor
-     * @param tipoEntrada
-     * @param marca
+     * Public Constructor for DispositivoEntrada
+     * @param tipoEntrada Tipo de entrada del periférico
+     * @param marca Marca del dispositivo de entrada
      */
     public DispositivoEntrada(String tipoEntrada, String marca) {
         this.tipoEntrada = tipoEntrada;

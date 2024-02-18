@@ -15,10 +15,10 @@ public class Mouse extends DispositivoEntrada {
     /**
      * Constructor de la Clase Mouse
      *
+     * @param marca Marca del dispositivo de entrada
      * @param tipoEntrada Tipo de entrada del periférico
-     * @param marca       Marca del dispositivo de entrada
      */
-    public Mouse(String tipoEntrada, String marca) {
+    public Mouse(String marca, String tipoEntrada) {
 
         //Constructor de la clase Padre
         super(tipoEntrada, marca);
@@ -29,7 +29,7 @@ public class Mouse extends DispositivoEntrada {
 
     @Override
     public String toString() {
-        return "Mouse{" + "idMouse=" + idMouse + "tipoEntrada='" + super.getTipoEntrada() + '\'' + ", marca='" + super.getMarca() + '\'' + "}";
+        return "Mouse{" + "idMouse=" + idMouse + ", " + super.toString() + "}";
     }
 }
 
